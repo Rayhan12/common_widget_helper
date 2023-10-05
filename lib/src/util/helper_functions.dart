@@ -1,6 +1,6 @@
 import 'package:intl/intl.dart';
 
-String numberConverter ({required num number,required bool isEnglish}){
+String numberConverterInternal ({required num number,required bool isEnglish}){
   return NumberFormat.decimalPattern(isEnglish? 'en' : 'bn').format(number);
 }
 

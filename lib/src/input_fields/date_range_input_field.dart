@@ -51,7 +51,7 @@ class _DateRangeInputFieldState extends State<DateRangeInputField> {
   }
 
   void getDateGap(){
-    dateGap =  "${widget.isEnglish? showingDataOf : showingDataOfBn} ${numberConverter(isEnglish: widget.isEnglish ,number: ((widget.dateRangeController.dateTimeRange!.end.difference(widget.dateRangeController.dateTimeRange!.start).inSeconds)/(3600*24)).round())} ${widget.isEnglish? days:daysBn}";
+    dateGap =  "${widget.isEnglish? showingDataOf : showingDataOfBn} ${numberConverterInternal(isEnglish: widget.isEnglish ,number: ((widget.dateRangeController.dateTimeRange!.end.difference(widget.dateRangeController.dateTimeRange!.start).inSeconds)/(3600*24)).round())} ${widget.isEnglish? days:daysBn}";
   }
 
 

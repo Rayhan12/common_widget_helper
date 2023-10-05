@@ -17,12 +17,15 @@ class SimpleInputField extends StatefulWidget {
   final TextInputType? inputType;
   final String? suffixText;
   final IconData? suffixIcon;
+  final TextAlign? textAlign;
   final EdgeInsets? padding;
   final Color? backgroundColor;
+  final BorderRadius? borderRadius;
+  final IconData? prefixIcon;
   final bool? viewOnly;
   final bool? needTitle;
   final FormFieldValidator<String>? validatorClass;
-  const SimpleInputField({Key? key, required this.controller, required this.hintText, required this.needValidation, required this.errorMessage, this.textInputAction, this.inputType, this.suffixText, this.backgroundColor, this.viewOnly, required this.fieldTitle, this.validatorClass, this.needTitle, this.suffixIcon, this.padding}) : super(key: key);
+  const SimpleInputField({Key? key, required this.controller, required this.hintText, required this.needValidation, required this.errorMessage, this.textInputAction, this.inputType, this.suffixText, this.backgroundColor, this.viewOnly, required this.fieldTitle, this.validatorClass, this.needTitle, this.suffixIcon, this.padding, this.textAlign, this.borderRadius, this.prefixIcon}) : super(key: key);
 
   @override
   State<SimpleInputField> createState() => _SimpleInputFieldState();
@@ -45,6 +48,7 @@ class _SimpleInputFieldState extends State<SimpleInputField> {
           keyboardType: widget.inputType ?? TextInputType.text,
           style: TextDesignConfig().bodyTextSmall,
           readOnly: widget.viewOnly ?? false,
+          textAlign: widget.textAlign ?? TextAlign.start,
           decoration: InputDecoration(
               errorStyle: TextDesignConfig().bodyTextExtraSmall.copyWith(fontSize: 11 ,color: ConfigColor.red),
               contentPadding: widget.padding?? const EdgeInsets.symmetric( horizontal: 20,vertical: 20),
@@ -55,19 +59,19 @@ class _SimpleInputFieldState extends State<SimpleInputField> {
               fillColor: widget.backgroundColor ?? ConfigColor.white,
               suffixText: widget.suffixText != null ? widget.suffixText.toString() : "",
               suffixIcon: widget.suffixIcon !=null? Icon(widget.suffixIcon ,color: ConfigColor.textLightBlack,): null,
+              prefixIcon:
+              widget.prefixIcon != null ? Icon(widget.prefixIcon) : null,
               border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide.none
-              ),
+                  borderRadius: widget.borderRadius ?? BorderRadius.circular(10),
+                  borderSide: BorderSide.none),
               enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  borderSide: BorderSide.none
+                  borderRadius: widget.borderRadius ?? BorderRadius.circular(10),
+                  borderSide: BorderSide.none)
               ),
-          ),
-          textInputAction: widget.textInputAction ?? TextInputAction.next,
-          onFieldSubmitted: (value){
-            widget.controller.text = value;
-          },
+              textInputAction: widget.textInputAction ?? TextInputAction.next,
+              onFieldSubmitted: (value){
+                widget.controller.text = value;
+              },
           onSaved: (value){
             widget.controller.text = value!;
           },

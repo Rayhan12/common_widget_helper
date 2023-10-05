@@ -20,6 +20,8 @@ class DropDownInputField extends StatefulWidget {
   final List<String> items;
   final TextStyle? textStyle;
   final EdgeInsets? padding;
+  final Key? itemkey;
+
 
   ///Common Error factor
   /// 1=> If item list contains duplicate values
@@ -39,7 +41,7 @@ class DropDownInputField extends StatefulWidget {
       this.setInitialValue,
       this.textStyle,
       this.padding,
-      this.borderRadius})
+      this.borderRadius, this.itemkey})
       : super(key: key);
 
   @override
@@ -64,6 +66,7 @@ class _DropDownInputFieldState extends State<DropDownInputField> {
               style: widget.textStyle ?? TextDesignConfig().bodyTitle),
         if (widget.needTitle ?? true) const SizedBox(height: 5),
         DropdownButtonFormField2(
+          key: widget.itemkey,
           items: widget.items.map((e) => DropdownMenuItem<String>(
               value: e.toString(),
               child: SizedBox(

@@ -29,13 +29,13 @@ class _PasswordInputFieldState extends State<PasswordInputField> {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(widget.fieldTitle ,style: TextDesign().bodyTitle),
+        Text(widget.fieldTitle ,style: TextDesignConfig().bodyTitle),
         const SizedBox(height: 5),
         TextFormField(
           autofocus: false,
           obscureText: hidePassword,
           controller: widget.password,
-          style: TextDesign().bodyTextSmall,
+          style: TextDesignConfig().bodyTextSmall,
           onSaved: (value) {
             widget.password.text = value!;
           },
@@ -51,9 +51,9 @@ class _PasswordInputFieldState extends State<PasswordInputField> {
           textInputAction: widget.textInputAction ?? TextInputAction.done,
           validator: ValidatorClass().validatePassword,
           decoration: InputDecoration(
-            focusColor: MyColor.purple,
+            focusColor: ConfigColor.purple,
             filled: true,
-            fillColor: widget.backgroundColor ?? MyColor.white,
+            fillColor: widget.backgroundColor ?? ConfigColor.white,
             suffixIcon: hasSomePassword ? IconButton(
               onPressed: (){
                 setState((){
@@ -65,7 +65,7 @@ class _PasswordInputFieldState extends State<PasswordInputField> {
 
             contentPadding: const EdgeInsets.symmetric(vertical: 20 ,horizontal: 15),
             hintText: widget.hintText,
-            hintStyle: TextDesign().bodyTextSmall,
+            hintStyle: TextDesignConfig().bodyTextSmall,
             border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(10),
                 borderSide: const BorderSide(

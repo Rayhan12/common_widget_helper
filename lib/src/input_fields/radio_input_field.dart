@@ -69,7 +69,7 @@ class _RadioButtonModifiedState extends State<RadioButtonModified> {
       child: Padding(
         padding: (widget.maxLength == widget.index)? const EdgeInsets.only(right: 0) : const EdgeInsets.only(right: 5),
         child: Material(
-          color: MyColor.scaffoldColor,
+          color: ConfigColor.scaffoldColor,
           borderRadius: BorderRadius.circular(10),
           child: RadioMenuButton(
             value: widget.tileName,
@@ -79,7 +79,7 @@ class _RadioButtonModifiedState extends State<RadioButtonModified> {
             onChanged: (value){
               widget.onClick(value);
             },
-            child: Text(widget.tileName ,style: TextDesign().bodySubText ,overflow: TextOverflow.ellipsis),
+            child: Text(widget.tileName ,style: TextDesignConfig().bodySubText ,overflow: TextOverflow.ellipsis),
           ),
         ),
       ),

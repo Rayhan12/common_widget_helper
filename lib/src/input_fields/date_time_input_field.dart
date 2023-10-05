@@ -35,18 +35,18 @@ class _DateTimeInputFieldState extends State<DateTimeInputField> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         if(widget.needTitle ?? true)
-          Text(widget.fieldTitle ,style: TextDesign().bodyTitle),
+          Text(widget.fieldTitle ,style: TextDesignConfig().bodyTitle),
         if(widget.needTitle ?? true)
         TextFormField(
           controller: widget.controller,
-          style: TextDesign().bodySubText,
+          style: TextDesignConfig().bodySubText,
           decoration: InputDecoration(
-            errorStyle: TextDesign().bodyTextExtraSmall.copyWith(fontSize: 11 ,color: MyColor.red),
+            errorStyle: TextDesignConfig().bodyTextExtraSmall.copyWith(fontSize: 11 ,color: ConfigColor.red),
             contentPadding: const EdgeInsets.symmetric( horizontal: 20,vertical: 20),
             hintText: widget.hintText,
-            hintStyle: TextDesign().bodySubText.copyWith(color: MyColor.textLightBlack),
+            hintStyle: TextDesignConfig().bodySubText.copyWith(color: ConfigColor.textLightBlack),
             filled: true,
-            fillColor: widget.backgroundColor ?? MyColor.white,
+            fillColor: widget.backgroundColor ?? ConfigColor.white,
             suffixIcon: null,
             suffixText: widget.suffixText != null ? widget.suffixText.toString() : "",
             border: OutlineInputBorder(

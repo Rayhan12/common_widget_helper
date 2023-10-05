@@ -24,10 +24,10 @@ class _StatusChipState extends State<StatusChip> {
     return Container(
       padding: widget.padding ?? const EdgeInsets.symmetric(horizontal: 20 ,vertical: 10),
       decoration: BoxDecoration(
-        color: widget.backgroundColor ?? MyColor.purple,
+        color: widget.backgroundColor ?? ConfigColor.purple,
         borderRadius: widget.radius ?? BorderRadius.circular(25),
       ),
-      child: Text(widget.label ,style: widget.textStyle ?? TextDesign().bodyTextSmall.copyWith(color: MyColor.white)),
+      child: Text(widget.label ,style: widget.textStyle ?? TextDesignConfig().bodyTextSmall.copyWith(color: ConfigColor.white)),
     );
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class MyColor {
+class ConfigColor {
   /// Primary Colors
   static const cyan = Color(0xff52C6D8);
   static const purple = Color(0xff5C2D91);

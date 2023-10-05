@@ -32,23 +32,23 @@ class _MultiLineInputFieldState extends State<MultiLineInputField> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         if(widget.needTitle ?? true)
-          Text(widget.fieldTitle ,style: TextDesign().bodyTitle),
+          Text(widget.fieldTitle ,style: TextDesignConfig().bodyTitle),
         if(widget.needTitle ?? true)
           const SizedBox(height: 5),
         TextFormField(
           controller: widget.controller,
           keyboardType:TextInputType.multiline,
-          style: TextDesign().bodyTextSmall,
+          style: TextDesignConfig().bodyTextSmall,
           readOnly: widget.viewOnly ?? false,
           maxLines: widget.numberOfLines,
           decoration: InputDecoration(
-            errorStyle: TextDesign().bodyTextExtraSmall.copyWith(fontSize: 11 ,color: MyColor.red),
+            errorStyle: TextDesignConfig().bodyTextExtraSmall.copyWith(fontSize: 11 ,color: ConfigColor.red),
             contentPadding: const EdgeInsets.symmetric( horizontal: 20,vertical: 20),
             //label: FocusScope.of(context).focusedChild != null ? Text(widget.hintText) : null,
             hintText: widget.hintText,
-            hintStyle: TextDesign().bodyTextSmall.copyWith(color: MyColor.textLightBlack),
+            hintStyle: TextDesignConfig().bodyTextSmall.copyWith(color: ConfigColor.textLightBlack),
             filled: true,
-            fillColor: widget.backgroundColor ?? MyColor.white,
+            fillColor: widget.backgroundColor ?? ConfigColor.white,
             suffixText: widget.suffixText != null ? widget.suffixText.toString() : "",
             suffixIcon: null,
             border: OutlineInputBorder(

@@ -10,7 +10,7 @@ class MessageBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Text(message?? "Please try again later" ,style: TextDesign().bodyTextSmall),
+      child: Text(message?? "Please try again later" ,style: TextDesignConfig().bodyTextSmall),
     );
   }
 }

@@ -37,24 +37,24 @@ class _SimpleInputFieldState extends State<SimpleInputField> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         if(widget.needTitle ?? true)
-        Text(widget.fieldTitle ,style: TextDesign().bodyTitle),
+        Text(widget.fieldTitle ,style: TextDesignConfig().bodyTitle),
         if(widget.needTitle ?? true)
         const SizedBox(height: 5),
         TextFormField(
           controller: widget.controller,
           keyboardType: widget.inputType ?? TextInputType.text,
-          style: TextDesign().bodyTextSmall,
+          style: TextDesignConfig().bodyTextSmall,
           readOnly: widget.viewOnly ?? false,
           decoration: InputDecoration(
-              errorStyle: TextDesign().bodyTextExtraSmall.copyWith(fontSize: 11 ,color: MyColor.red),
+              errorStyle: TextDesignConfig().bodyTextExtraSmall.copyWith(fontSize: 11 ,color: ConfigColor.red),
               contentPadding: widget.padding?? const EdgeInsets.symmetric( horizontal: 20,vertical: 20),
               //label: FocusScope.of(context).focusedChild != null ? Text(widget.hintText) : null,
               hintText: widget.hintText,
-              hintStyle: TextDesign().bodyTextSmall.copyWith(color: MyColor.textLightBlack),
+              hintStyle: TextDesignConfig().bodyTextSmall.copyWith(color: ConfigColor.textLightBlack),
               filled: true,
-              fillColor: widget.backgroundColor ?? MyColor.white,
+              fillColor: widget.backgroundColor ?? ConfigColor.white,
               suffixText: widget.suffixText != null ? widget.suffixText.toString() : "",
-              suffixIcon: widget.suffixIcon !=null? Icon(widget.suffixIcon ,color: MyColor.textLightBlack,): null,
+              suffixIcon: widget.suffixIcon !=null? Icon(widget.suffixIcon ,color: ConfigColor.textLightBlack,): null,
               border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                   borderSide: BorderSide.none

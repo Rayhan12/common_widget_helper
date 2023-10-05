@@ -15,7 +15,7 @@ class RadioInputField extends StatefulWidget {
       {Key? key,
         required this.items,
         required this.controller,
-        required this.fieldColor})
+        this.fieldColor})
       : super(key: key);
 
   @override

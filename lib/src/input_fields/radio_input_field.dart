@@ -1,5 +1,6 @@
 
 
+import 'package:common_widget_helper/src/config_files/color_config.dart';
 import 'package:common_widget_helper/src/config_files/text_config.dart';
 import 'package:flutter/material.dart';
 
@@ -9,7 +10,7 @@ class RadioInputField extends StatefulWidget {
   ///Maximum input length is 3 items
   final List<String> items;
   final TextEditingController controller;
-  final Color fieldColor;
+  final Color? fieldColor;
   const RadioInputField(
       {Key? key,
         required this.items,
@@ -42,7 +43,7 @@ class _RadioInputFieldState extends State<RadioInputField> {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: widget.items
           .map((tileIdentifier) => RadioButtonModified(
-        fieldColor: widget.fieldColor,
+        fieldColor: widget.fieldColor ?? ConfigColor.scaffoldColor,
         controller: widget.controller,
         tileName: tileIdentifier,
         maxLength: widget.items.length,

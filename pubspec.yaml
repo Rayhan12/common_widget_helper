@@ -1,6 +1,6 @@
 name: common_widget_helper
 description: A new Flutter project.
-version: 0.0.1
+version: 1.0.2
 homepage: https://github.com/Rayhan12/common_widget_helper.git
 
 environment:
@@ -12,16 +12,13 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.2
   intl: ^0.18.0
-  image_picker: ^0.8.5+3
-  awesome_snackbar_content: ^0.0.8
-  provider: ^6.0.3
+#  image_picker: ^0.8.5+3
   flutter_datetime_picker_plus: ^2.0.1
   loading_animation_widget: ^1.2.0+2
   font_awesome_flutter: ^10.4.0
   google_fonts: ^4.0.3
   dropdown_button2: ^2.3.9
   flutter_typeahead: ^4.1.1
-  flutter_svg: ^1.1.6
 
 dev_dependencies:
   flutter_test:

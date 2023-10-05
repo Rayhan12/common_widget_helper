@@ -1,8 +1,8 @@
 library common_widget_helper;
 
 ///config Files
-export 'src/config_files/color_config.dart';
-export 'src/config_files/text_config.dart';
+// export 'src/config_files/color_config.dart';
+// export 'src/config_files/text_config.dart';
 
 ///Global Widgets
 export 'src/global_widgets/column_text_info.dart';

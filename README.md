@@ -16,7 +16,8 @@ know whether this package might be useful for them.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+Input fields made Easy!!
+New widgets introduced
 
 ## Getting started
 

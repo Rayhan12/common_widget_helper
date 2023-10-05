@@ -24,8 +24,8 @@ class _RowTextInfoState extends State<RowTextInfo> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(widget.title ,style: widget.titleStyle ?? TextDesign().bodyTextSmall.copyWith(color:widget.titleColor??  MyColor.textLightBlack)),
-        Text(widget.information ,style:widget.informationStyle ?? TextDesign().pageTitle.copyWith(color: widget.informationColor?? MyColor.textBlack)),
+        Text(widget.title ,style: widget.titleStyle ?? TextDesignConfig().bodyTextSmall.copyWith(color:widget.titleColor??  ConfigColor.textLightBlack)),
+        Text(widget.information ,style:widget.informationStyle ?? TextDesignConfig().pageTitle.copyWith(color: widget.informationColor?? ConfigColor.textBlack)),
       ],
     );
   }

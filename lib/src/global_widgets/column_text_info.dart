@@ -23,8 +23,8 @@ class ColumnTextInfo extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: isLeftAligned ? CrossAxisAlignment.start : CrossAxisAlignment.end,
       children: [
-        Text(title ,style: titleStyle ?? TextDesign().bodyTextExtraSmall.copyWith(color: titleColor ?? MyColor.textLightBlack)),
-        Text(information ,style: informationStyle ?? TextDesign().pageTitle.copyWith(color: informationColor ?? MyColor.textBlack)),
+        Text(title ,style: titleStyle ?? TextDesignConfig().bodyTextExtraSmall.copyWith(color: titleColor ?? ConfigColor.textLightBlack)),
+        Text(information ,style: informationStyle ?? TextDesignConfig().pageTitle.copyWith(color: informationColor ?? ConfigColor.textBlack)),
       ],
     );
   }

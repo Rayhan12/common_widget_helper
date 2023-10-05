@@ -61,7 +61,7 @@ class _DropDownInputFieldState extends State<DropDownInputField> {
       children: [
         if (widget.needTitle ?? true)
           Text(widget.fieldTitle,
-              style: widget.textStyle ?? TextDesign().bodyTitle),
+              style: widget.textStyle ?? TextDesignConfig().bodyTitle),
         if (widget.needTitle ?? true) const SizedBox(height: 5),
         DropdownButtonFormField2(
           items: widget.items.map((e) => DropdownMenuItem<String>(
@@ -71,15 +71,15 @@ class _DropDownInputFieldState extends State<DropDownInputField> {
                 child: Text(
                   e,
                   softWrap: true,
-                  style: widget.textStyle ?? TextDesign().bodyTextSmall,
+                  style: widget.textStyle ?? TextDesignConfig().bodyTextSmall,
                 ),
               )))
               .toList(),
-          style: widget.textStyle ?? TextDesign().bodyTextSmall,
+          style: widget.textStyle ?? TextDesignConfig().bodyTextSmall,
           decoration: InputDecoration(
-            errorStyle: TextDesign()
+            errorStyle: TextDesignConfig()
                 .bodyTextExtraSmall
-                .copyWith(fontSize: 11, color: MyColor.red),
+                .copyWith(fontSize: 11, color: ConfigColor.red),
             contentPadding: widget.padding ??
                 (widget.controller.text.isNotEmpty
                     ? const EdgeInsets.only(
@@ -88,11 +88,11 @@ class _DropDownInputFieldState extends State<DropDownInputField> {
                         right: 10, left: 20, bottom: 15, top: 15)),
             hintText: widget.hintText,
             hintStyle: widget.textStyle ??
-                TextDesign()
+                TextDesignConfig()
                     .bodyTextSmall
-                    .copyWith(color: MyColor.textLightBlack),
+                    .copyWith(color: ConfigColor.textLightBlack),
             filled: true,
-            fillColor: widget.backgroundColor ?? MyColor.white,
+            fillColor: widget.backgroundColor ?? ConfigColor.white,
             suffixText:
                 widget.suffixText != null ? widget.suffixText.toString() : "",
             suffixIcon: null,
@@ -122,7 +122,7 @@ class _DropDownInputFieldState extends State<DropDownInputField> {
           dropdownStyleData: DropdownStyleData(
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8),
-                color: MyColor.white,
+                color: ConfigColor.white,
                 boxShadow: [
                   BoxShadow(
                     color: Colors.black.withOpacity(0.05),

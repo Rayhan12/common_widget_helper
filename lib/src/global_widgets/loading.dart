@@ -14,6 +14,6 @@ class Loading extends StatefulWidget {
 class _LoadingState extends State<Loading> {
   @override
   Widget build(BuildContext context) {
-    return Center(child: LoadingAnimationWidget.fallingDot(color: MyColor.purple, size: 40));
+    return Center(child: LoadingAnimationWidget.fallingDot(color: ConfigColor.purple, size: 40));
   }
 }

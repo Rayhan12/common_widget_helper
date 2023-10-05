@@ -46,9 +46,9 @@ class DynamicColumnTextInfo extends StatelessWidget {
               textAlign: isLeftAligned ? TextAlign.start : TextAlign.end,
               title,
               style: titleStyle ??
-                  TextDesign()
+                  TextDesignConfig()
                       .bodyTextExtraSmall
-                      .copyWith(color: titleColor ?? MyColor.textLightBlack),
+                      .copyWith(color: titleColor ?? ConfigColor.textLightBlack),
               maxLines: tittleMaxLine ?? 1,
               overflow: TextOverflow.ellipsis,
             )),
@@ -58,9 +58,9 @@ class DynamicColumnTextInfo extends StatelessWidget {
               textAlign: isLeftAligned ? TextAlign.start : TextAlign.end,
               information,
               style: informationStyle ??
-                  TextDesign()
+                  TextDesignConfig()
                       .pageTitle
-                      .copyWith(color: informationColor ?? MyColor.textBlack),
+                      .copyWith(color: informationColor ?? ConfigColor.textBlack),
               maxLines: informationMaxLine ?? 1,
               overflow: TextOverflow.ellipsis,
             )),

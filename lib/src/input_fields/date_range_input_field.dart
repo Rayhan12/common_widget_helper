@@ -85,7 +85,7 @@ class _DateRangeInputFieldState extends State<DateRangeInputField> {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: widget.backgroundColor ?? MyColor.white,
+      color: widget.backgroundColor ?? ConfigColor.white,
       child: InkWell(
         onTap: (){
           callDateRangePicker(currentContext: context);
@@ -99,8 +99,8 @@ class _DateRangeInputFieldState extends State<DateRangeInputField> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Date Range" ,style: TextDesign().bodyTitle),
-                  Text(dateGap ,style: TextDesign().bodyTextExtraSmall,),
+                  Text("Date Range" ,style: TextDesignConfig().bodyTitle),
+                  Text(dateGap ,style: TextDesignConfig().bodyTextExtraSmall,),
                 ],
               ),
               const SizedBox(height: 5,),
@@ -110,16 +110,16 @@ class _DateRangeInputFieldState extends State<DateRangeInputField> {
                     child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(5),
-                        color: MyColor.scaffoldColor,
+                        color: ConfigColor.scaffoldColor,
                       ),
                       clipBehavior: Clip.hardEdge,
                       padding: const EdgeInsets.symmetric(horizontal: 15 ,vertical: 15),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(startDateController.text ,style: TextDesign().bodyTextSmall,overflow: TextOverflow.ellipsis),
+                          Text(startDateController.text ,style: TextDesignConfig().bodyTextSmall,overflow: TextOverflow.ellipsis),
                           if(widget.showSuffixIcons ?? false)
-                            const Icon(Icons.calendar_month_rounded ,color: MyColor.textLightBlack,)
+                            const Icon(Icons.calendar_month_rounded ,color: ConfigColor.textLightBlack,)
                         ],
                       ),
                     ),
@@ -129,16 +129,16 @@ class _DateRangeInputFieldState extends State<DateRangeInputField> {
                     child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(5),
-                        color: MyColor.scaffoldColor,
+                        color: ConfigColor.scaffoldColor,
                       ),
                       clipBehavior: Clip.hardEdge,
                       padding: const EdgeInsets.symmetric(horizontal: 15 ,vertical: 15),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(endDateController.text ,style: TextDesign().bodyTextSmall,overflow: TextOverflow.ellipsis),
+                          Text(endDateController.text ,style: TextDesignConfig().bodyTextSmall,overflow: TextOverflow.ellipsis),
                           if(widget.showSuffixIcons ?? false)
-                            const Icon(Icons.calendar_month_rounded ,color: MyColor.textLightBlack,)
+                            const Icon(Icons.calendar_month_rounded ,color: ConfigColor.textLightBlack,)
                         ],
                       ),
                     ),
